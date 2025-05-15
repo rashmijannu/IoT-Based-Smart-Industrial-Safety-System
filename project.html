@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IoT Based Smart Industrial Safety System</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0 20px;
+      background: rgb(53, 53, 53);
+    }
+    header {
+      background: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 25px;
+    }
+    section {
+     font-family: 'Ubuntu', sans-serif;
+      margin: 30px 0;
+      padding: 20px;
+      background: rgb(187, 186, 186);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    h2 {
+      color: #003468;
+    }
+    .flex-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+    .video-container {
+      flex: 1;
+    }
+    .description {
+      flex: 1;
+    }
+    .images {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      gap: 10px;
+    }
+    .images img {
+      width: 49%;
+      border-radius: 8px;
+    }
+    .vertical-pics {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    .vertical-pics img {
+      height: 300px;
+      border-radius: 10px;
+    }
+   
+    .vertical-description {
+      text-align: left;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>IoT Based Smart Industrial Safety System</h1>
+  </header>
+
+  <section>
+    <h2>Abstract</h2>
+   <strong> <p>The project offers an IoT-based industrial safety system designed to increase workplace safety by monitoring flames using environmental hazards such as temperature, gas leaks, smoke, and an ESP32 microcontroller. The system integrates the sensor to collect real-time data, processes it through a central controller, and triggers notifications through information sent to a Buzzer, LED, Firebase, and Blynk platforms. Emergency contacts, including fire stations and hospitals, are informed through Twilio services, quickly ensuring dangerous identification and response with data visualization on a dashboard, and offers a scalable solution for industrial safety management.</p></strong>
+  </section>
+
+  <section>
+    
+    <h2>Technologies Used</h2>
+    <strong><ul>
+      <li><strong>Software:</strong></li>
+      <ul style="list-style-type:disc;"> <li>Arduino IDE | Blynk Platform | Firebase | TWILIO API</li></ul>
+      <li><strong>Hardware:</strong></li>
+      <ul style="list-style-type:disc;"> <li>Sensors: MQ-135, MQ-2, Flame, DHT11</li>
+      <li>Microcontroller: ESP32 Dev Module</li>
+      <li>Alert system: Buzzer , LEDs</li></ul>
+      
+    </ul></strong>
+  </section>
+<strong>
+  <section>
+    <h2>Experimental Results : Case 1</h2>
+    <div class="flex-row">
+      <div class="video-container">
+        <video width="100%" controls>
+          <source src="media/smoke.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="description">
+        <p><strong>Gas Detection:</strong><br><br> It makes use of an MQ-2 fuel sensor to
+sniff out harmful substances like carbon monoxide, ammonia, and VOCs.<br><br> It works constantly
+checking air first-class and sending readings to the microcontroller. <br><br>When dangerous gasoline
+stages are detected, it triggers an alert immediately.<br><br> This helps prevent inhalation risks and
+capacity explosions due to flammable gases.</p><br><br>
+      </div>
+    </div>
+    <div class="images">
+      <img src="media/gasleak.jpg" alt="Related image 1"/>
+      <img src="media/gasleak2.jpg" alt="Related image 2"/>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experimental Results : Case 2</h2>
+    <div class="flex-row">
+      <div class="video-container">
+        <video width="100%" controls>
+          <source src="media/fire.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="description">
+        <p><strong>Fire and Smoke Detection:</strong><br><br>This is the "watchdog" in the system. These are:
+            <ol>
+                <li>A flame sensor for detecting infrared radiation from open flames.</li>
+                <li>A smoke sensor for detecting air particles indicating the early stages of the fire.</li>
+            </ol>
+In case of fire or smoking detection, this module works immediately and triggers signals to the
+control unit - preventing the fire from spreading </p>
+      </div>
+    </div>
+    <div class="images">
+      <img src="media/gaspic1.jpg" alt="Related image 1"/>
+      <img src="media/gaspic2.jpg" alt="Related image 2"/>
+    </div>
+  </section>
+</strong>
+  <section>
+    <h2>Remote Alerts through Blynk and SMS</h2>
+    <div class="vertical-pics">
+        <img src="media/blynk.jpg" alt="Vertical Image 1" />
+        <p class="vertical-description"><strong>Bylnk alert interface Contains
+        <ul>
+                        <li>Air quality in ppm</li>
+                        <li>Gas in ppm</li>
+                        <li>Temperature</li>
+                        <li>Humidity</li>
+                        <li>Fire LED</li>
+                        <li>Buzzer</li>
+                        <li>Gas LED</li>
+                        <li>Latitude</li>
+                        <li>Longitude</li>
+                    </ul>
+        </strong></p>
+ 
+        <img src="media/sms.jpg" alt="Vertical Image 2" />
+             <p class="vertical-description"><strong>SMS sent through Twilio API to the registered number<br><br>
+            The sms is used to send alert to the nearby fire station , hospital and other authorities , registered phone numbers recieve this sms alert.</strong> </p>
+
+    </div>
+  </section>
+
+</body>
+</html>
